@@ -19,7 +19,7 @@
         }
 
         .menu-item {
-            display: flex;
+            display:inline-flex;
             align-items: center;
             padding: 10px;
             cursor: pointer;
@@ -27,8 +27,8 @@
         }
 
         .submenu {
-            display: none;
-            list-style: none;
+            display:none;
+            list-style:none;
             padding: 0;
             margin: 0;
         }
@@ -55,7 +55,7 @@
 <body>
     <p>
         <h3>
-            Here is an example of what I think every closet needs! An easy way to help us match our daily outfits. Let's see what you can do in 5 minutes. Do you think you can break your on record?
+            Here is an example of what I think every closet needs! An easy way to help us match our daily outfits. Let's see what you can do in 5 minutes. Do you think you can break your own record?
         </h3>
     
     </p>
@@ -64,7 +64,10 @@
             <label for="name">
                 Enter your name:
             </lable>
-            <input type="text" id="name"required>
+            <input type="text" id="username"required>
+        </div>
+        <div>
+            <input type="submit" value="Start" onclick="submitForm()">
         </div>
     </form>
 
@@ -74,31 +77,31 @@
 
 <ul class="menu">
     <li class="menu-item">
-        <img src="tank-top-svgrepo-com.svg" alt="">
+        <img src="tank-top-svgrepo-com.svg" alt="svgtop">
         <ul class="submenu">
-            <li class="submenu-item">1</li>
-            <li class="submenu-item">2</li>
-            <li class="submenu-item">3</li>
-            <li class="submenu-item">4</li>
+            <li class="submenu-item"><img src="PhotoRoom-20231202_145557.png" alt="blackstringtop"></li>
+            <li class="submenu-item"><img src="PhotoRoom-20231202_151013.png" alt="greentop"></li>
+            <li class="submenu-item"><img src="PhotoRoom-20231202_151013.png" alt="whitecorset"></li>
+            <li class="submenu-item"><img src="PhotoRoom-20231202_154341.png" alt="greysweater"></li>
         </ul>
     </li>
 
     <li class="menu-item">
-        <img src="pants-garment-svgrepo-com.svg" alt="">
+        <img src="pants-garment-svgrepo-com.svg" alt="svgbottom">
         <ul class="submenu">
-            <li class="submenu-item">5</li>
-            <li class="submenu-item">6</li>
-            <li class="submenu-item">7</li>
-            <li class="submenu-item">8</li>
+            <li class="submenu-item"><img src="PhotoRoom-20231201_104258.png" alt="blackpants"></li>
+            <li class="submenu-item"><img src="PhotoRoom-20231201_112136.png" alt="bluejeans"></li>
+            <li class="submenu-item"><img src="PhotoRoom-20231202_153551.png" alt="jeanskirt"></li>
+            <li class="submenu-item"><img src="PhotoRoom-20231202_151242.png" alt="whitepants"></li>
         </ul>
     </li>
     <li class="menu-item">
-        <img src="high-heel-svgrepo-com.svg" alt="">
+        <img src="high-heel-svgrepo-com.svg" alt="svgshoe">
         <ul class="submenu">
-            <li class="submenu-item">9</li>
-            <li class="submenu-item">10</li>
-            <li class="submenu-item">11</li>
-            <li class="submenu-item">12</li>
+            <li class="submenu-item"><img src="blackandbedazzled.png" alt="blackandbedazzled"></li>
+            <li class="submenu-item"><img src="blackversaceplatforms.png" alt="blackversaceplatforms"></li>
+            <li class="submenu-item"><img src="greenshoes.png" alt="greenshoes"></li>
+            <li class="submenu-item"><img src="whitefloralshoes.png" alt="whitefloralshoes"></li>
         </ul>
     </li>
 </ul>
