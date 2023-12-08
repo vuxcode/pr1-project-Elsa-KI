@@ -50,65 +50,75 @@
             height: 100px;
             width: 70px;
         }
+        .background{
+            align-items: center;
+        }
+        .WhereTopsGo,
+        .whereBottomsGo,
+        .WhereShoesGo{
+            margin: 40px;
+        } 
     </style>
 </head>
 <body>
     <p>
         <h3>
-            Here is an example of what I think every closet needs! An easy way to help us match our daily outfits. Let's see what you can do in 5 minutes. Do you think you can break your own record?
+            username
         </h3>
     
     </p>
-    <form id="form">
-        <div>
-            <label for="name">
-                Enter your name:
-            </lable>
-            <input type="text" id="username"required>
-        </div>
-        <div>
-            <input type="submit" value="Start" onclick="submitForm()">
-        </div>
-    </form>
+
 
     <div id="countdown">
-        <p>00:00</p>
+        <p>05:00</p>
     </div>
+    <ul class="menu">
+        <li class="menu-item">
+            <img src="tank-top-svgrepo-com.svg" alt="svgtop">
+            <ul class="submenu">
+                <li class="submenu-item"><button onclick="Moveit()"><img src="PhotoRoom-20231202_145557.png" alt="blackstringtop"></button></li>
+                <li class="submenu-item"><img src="PhotoRoom-20231202_151013.png" alt="greentop"></li>
+                <li class="submenu-item"><img src="PhotoRoom-20231202_153315.png" alt="whitecorset"></li>
+                <li class="submenu-item"><img src="PhotoRoom-20231202_154341.png" alt="greysweater"></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <img src="pants-garment-svgrepo-com.svg" alt="svgbottom">
+            <ul class="submenu">
+                <li class="submenu-item"><img src="PhotoRoom-20231201_104258.png" alt="blackpants"></li>
+                <li class="submenu-item"><img src="PhotoRoom-20231201_112136.png" alt="bluejeans"></li>
+                <li class="submenu-item"><img src="PhotoRoom-20231202_153551.png" alt="jeanskirt"></li>
+                <li class="submenu-item"><img src="PhotoRoom-20231202_151242.png" alt="whitepants"></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <img src="high-heel-svgrepo-com.svg" alt="svgshoe">
+            <ul class="submenu">
+                <li class="submenu-item"><img src="blackandbedazzled.png" alt="blackandbedazzled"></li>
+                <li class="submenu-item"><img src="blackversaceplatforms.png" alt="blackversaceplatforms"></li>
+                <li class="submenu-item"><img src="greenshoes.png" alt="greenshoes"></li>
+                <li class="submenu-item"><img src="whitefloralshoes.png" alt="whitefloralshoes"></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="background">
+        <div class="WhereTopsGo">
 
-<ul class="menu">
-    <li class="menu-item">
-        <img src="tank-top-svgrepo-com.svg" alt="svgtop">
-        <ul class="submenu">
-            <li class="submenu-item"><img src="PhotoRoom-20231202_145557.png" alt="blackstringtop"></li>
-            <li class="submenu-item"><img src="PhotoRoom-20231202_151013.png" alt="greentop"></li>
-            <li class="submenu-item"><img src="PhotoRoom-20231202_153315.png" alt="whitecorset"></li>
-            <li class="submenu-item"><img src="PhotoRoom-20231202_154341.png" alt="greysweater"></li>
-        </ul>
-    </li>
+        </div>
+        <div class="WhereBottomsGo">
 
-    <li class="menu-item">
-        <img src="pants-garment-svgrepo-com.svg" alt="svgbottom">
-        <ul class="submenu">
-            <li class="submenu-item"><img src="PhotoRoom-20231201_104258.png" alt="blackpants"></li>
-            <li class="submenu-item"><img src="PhotoRoom-20231201_112136.png" alt="bluejeans"></li>
-            <li class="submenu-item"><img src="PhotoRoom-20231202_153551.png" alt="jeanskirt"></li>
-            <li class="submenu-item"><img src="PhotoRoom-20231202_151242.png" alt="whitepants"></li>
-        </ul>
-    </li>
-    <li class="menu-item">
-        <img src="high-heel-svgrepo-com.svg" alt="svgshoe">
-        <ul class="submenu">
-            <li class="submenu-item"><img src="blackandbedazzled.png" alt="blackandbedazzled"></li>
-            <li class="submenu-item"><img src="blackversaceplatforms.png" alt="blackversaceplatforms"></li>
-            <li class="submenu-item"><img src="greenshoes.png" alt="greenshoes"></li>
-            <li class="submenu-item"><img src="whitefloralshoes.png" alt="whitefloralshoes"></li>
-        </ul>
-    </li>
-</ul>
+        </div>
+        <div class="WhereShoesGo">
 
+        </div>
+    </div>
+    <a href="#" class="button">Submit</a>
 </body>
 </html>
 <script>
 var timer= 300;
-
+function Moveit(){
+    var output = getElementById(WhereTopsGo);
+    output.innerHTML=Moveit
+}
 </script>
