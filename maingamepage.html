@@ -77,39 +77,38 @@
         <li class="menu-item">
             <img src="tank-top-svgrepo-com.svg" alt="svgtop">
             <ul class="submenu">
-                <li class="submenu-item"><button id="blackstringtop" onclick="Moveit()"><img src="PhotoRoom-20231202_145557.png" alt="blackstringtop"></button></li>
-                <li class="submenu-item"><button id="greentop" onclick="Moveit()"><img src="PhotoRoom-20231202_151013.png" alt="greentop"></button></li>
-                <li class="submenu-item"><button id="whitecorset" onclick="Moveit()"><img src="PhotoRoom-20231202_153315.png" alt="whitecorset"></button></li>
-                <li class="submenu-item"><button id="greysweater" onclick="Moveit()"><img src="PhotoRoom-20231202_154341.png" alt="greysweater"></button></li>
+                <li class="submenu-item"><button id="blackStringtop" onclick="Moveit('blackStringtop')"><img src="PhotoRoom-20231202_145557.png" alt="blackstringtop"></button></li>
+                <li class="submenu-item"><button id="greenTop" onclick="Moveit('greenTop')"><img src="PhotoRoom-20231202_151013.png" alt="greentop"></button></li>
+                <li class="submenu-item"><button id="whiteCorset" onclick="Moveit('whiteCorset')"><img src="PhotoRoom-20231202_153315.png" alt="whitecorset"></button></li>
+                <li class="submenu-item"><button id="greySweater" onclick="Moveit('greySweater')"><img src="PhotoRoom-20231202_154341.png" alt="greysweater"></button></li>
             </ul>
         </li>
         <li class="menu-item">
             <img src="pants-garment-svgrepo-com.svg" alt="svgbottom">
             <ul class="submenu">
-                <li class="submenu-item"><button onclick=""><img src="PhotoRoom-20231201_104258.png" alt="blackpants"></button></li>
-                <li class="submenu-item"><button onclick=""><img src="PhotoRoom-20231201_112136.png" alt="bluejeans"></button></li>
-                <li class="submenu-item"><button onclick=""><img src="PhotoRoom-20231202_153551.png" alt="jeanskirt"></button></li>
-                <li class="submenu-item"><button onclick=""><img src="PhotoRoom-20231202_151242.png" alt="whitepants"></button></li>
+                <li class="submenu-item"><button id="blackPants" onclick="Moveit1('blackPants')"><img src="PhotoRoom-20231201_104258.png" alt="BP"></button></li>
+                <li class="submenu-item"><button id="blueJeans" onclick="Moveit1('blueJeans')"><img src="PhotoRoom-20231201_112136.png" alt="BJ"></button></li>
+                <li class="submenu-item"><button id="jeanSkirt" onclick="Moveit1('jeanSkirt')"><img src="PhotoRoom-20231202_153551.png" alt="JS"></button></li>
+                <li class="submenu-item"><button id="whitePants" onclick="Moveit1('whitePants')"><img src="PhotoRoom-20231202_151242.png" alt="WP"></button></li>
             </ul>
         </li>
         <li class="menu-item">
             <img src="high-heel-svgrepo-com.svg" alt="svgshoe">
             <ul class="submenu">
-                <li class="submenu-item"><button><img src="blackandbedazzled.png" alt="blackandbedazzled"></button></li>
-                <li class="submenu-item"><button><img src="blackversaceplatforms.png" alt="blackversaceplatforms"></button></li>
-                <li class="submenu-item"><button><img src="greenshoes.png" alt="greenshoes"></button></li>
-                <li class="submenu-item"><button><img src="whitefloralshoes.png" alt="whitefloralshoes"></button></li>
+                <li class="submenu-item"><button id="" onclick=""><img src="blackandbedazzled.png" alt="blackandbedazzled"></button></li>
+                <li class="submenu-item"><button id="" onclick=""><img src="blackversaceplatforms.png" alt="blackversaceplatforms"></button></li>
+                <li class="submenu-item"><button id="" onclick=""><img src="greenshoes.png" alt="greenshoes"></button></li>
+                <li class="submenu-item"><button id="" onclick=""><img src="whitefloralshoes.png" alt="whitefloralshoes"></button></li>
             </ul>
         </li>
     </ul>
     <div class="background">
         <div id="WhereTopsGo">
-            <p>need to see where you are</p>
         </div>
-        <div class="WhereBottomsGo">
+        <div id="WhereBottomsGo">
 
         </div>
-        <div class="WhereShoesGo">
+        <div id="WhereShoesGo">
 
         </div>
     </div>
@@ -117,15 +116,22 @@
 
 <script>
 var timer= 300;
-var Button1= document.getElementById("blackstringtop");
-var Button2= document.getElementById("greentop");
-var Button3= document.getElementById("whitecorset");
-var Button4= document.getElementById("greysweater");
-function Moveit(){
+
+function Moveit(buttonId){
     var toPlacement= document.getElementById("WhereTopsGo");
-    console.log(Button1);
-    toPlacement.innerHTML= Button1;
+    var topsButton= document.getElementById(buttonId);
+    if (topsButton) {
+        toPlacement.innerHTML=topsButton.innerHTML;
+    }
 }
+var Button5= document.getElementById("blackPants");
+var Button6= document.getElementById("blueJeans");
+var Button7= document.getElementById("jeanSkirt");
+var Button8= document.getElementById("whitePants");
+function Moveit1(){
+    var toPlacement1= document.getElementById("WhereBottomsGo");
+    toPlacement1.innerHTML= Button5.innerHTML+ Button6.innerHTML+ Button7.innerHTML+ Button8.innerHTML;
+    }
 </script>
 </body>
 </html>
