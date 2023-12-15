@@ -15,7 +15,7 @@
         }
         .menuContainer{
             width: 130px;
-            background-color: #333;
+            background-color: #858585;
             padding: 10px;
             border-radius: 10px;
             margin-right: 20px;
@@ -31,7 +31,7 @@
             align-items: center;
             padding: 12px;
             cursor: pointer;
-            border-bottom: 1px solid #555;
+            border-bottom: 1px solid #cbcbcb;
         }
 
         .submenu {
@@ -39,7 +39,7 @@
             list-style:none;
             padding: 0;
             margin: 0;
-            background-color: #555;
+            background-color: #848484;
             border-radius: 5px;
             position:absolute;
             left: 150px;
@@ -94,8 +94,7 @@
     <div id="mainContainer">
         <div class="menuContainer">
             <ul class="menu">
-                <li class="menu-item" onclick="toggleSubmenu">
-                    <img src="tank-top-svgrepo-com.svg" alt="svgtop">
+                <li class="menu-item"><button  onclick="toggleSubmenu()"><img src="tank-top-svgrepo-com.svg" alt="svgtop"></button>
                     <ul class="submenu" id="submenuId">
                         <li class="submenu-item"><button id="blackStringtop" onclick="Moveit('blackStringtop')"><img src="PhotoRoom-20231202_145557.png" alt="blackstringtop"></button></li>
                         <li class="submenu-item"><button id="greenTop" onclick="Moveit('greenTop')"><img src="PhotoRoom-20231202_151013.png" alt="greentop"></button></li>
@@ -103,18 +102,16 @@
                         <li class="submenu-item"><button id="greySweater" onclick="Moveit('greySweater')"><img src="PhotoRoom-20231202_154341.png" alt="greysweater"></button></li>
                     </ul>
                 </li>
-                <li class="menu-item" onclick="toggleSubmenu1">
-                    <img src="pants-garment-svgrepo-com.svg" alt="svgbottom">
-                    <ul class="submenu" id="submenuId1" >
+                <li class="menu-item"><button onclick="toggleSubmenu1()"><img src="pants-garment-svgrepo-com.svg" alt="svgbottom"></button>
+                    <ul class="submenu" id="submenuId1">
                         <li class="submenu-item"><button id="blackPants" onclick="Moveit1('blackPants')"><img src="PhotoRoom-20231201_104258.png" alt="BP"></button></li>
                         <li class="submenu-item"><button id="blueJeans" onclick="Moveit1('blueJeans')"><img src="PhotoRoom-20231201_112136.png" alt="BJ"></button></li>
                         <li class="submenu-item"><button id="jeanSkirt" onclick="Moveit1('jeanSkirt')"><img src="PhotoRoom-20231202_153551.png" alt="JS"></button></li>
                         <li class="submenu-item"><button id="whitePants" onclick="Moveit1('whitePants')"><img src="PhotoRoom-20231202_151242.png" alt="WP"></button></li>
                     </ul>
                 </li>
-                <li class="menu-item" id="submenuId2">
-                    <img src="high-heel-svgrepo-com.svg" alt="svgshoe">
-                    <ul class="submenu">
+                <li class="menu-item"><button onclick="toggleSubmenu2()"><img src="high-heel-svgrepo-com.svg" alt="svgshoe"></button>
+                    <ul class="submenu" id="submenuId2">
                         <li class="submenu-item"><button id="blackandbedazzled" onclick="Moveit2('blackandbedazzled')"><img src="blackandbedazzled.png" alt="blackandbedazzled"></button></li>
                         <li class="submenu-item"><button id="blackversaceplatforms" onclick="Moveit2('blackversaceplatforms')"><img src="blackversaceplatforms.png" alt="blackversaceplatforms"></button></li>
                         <li class="submenu-item"><button id="greenshoes" onclick="Moveit2('greenshoes')"><img src="greenshoes.png" alt="greenshoes"></button></li>
@@ -131,7 +128,6 @@
         <a href="#" class="button">Submit</a>
     </div>
 <script>
-var timer= 300;
 
 function Moveit(buttonId){
     var toPlacement= document.getElementById("WhereTopsGo");
@@ -155,16 +151,18 @@ function Moveit2(buttonId2) {
     }
 }
 var hideIt= false;
-var submenu= document.getElementById(submenuId);
+var submenu= document.getElementById("submenuId");
 function toggleSubmenu(){
 
 if (hideIt) {
     submenu.style.display= "block";
     hideIt=false;
+    console.log("ON")
 }
 else{
     submenu.style.display="none";
     hideIt=true;
+    console.log("OFF")
 }
 }
 var hideIt1=false;
@@ -180,7 +178,21 @@ else{
     hideIt1=true;
 }
 }
+var hideIt2=false;
+var submenu1= document.getElementById(submenuId2);
+function toggleSubmenu2(){
 
+if (hideIt2) {
+    submenu2.style.display= "block";
+    hideIt2=false;
+}
+else{
+    submenu2.style.display="none";
+    hideIt2=true;
+}
+}
+// document.getElementById(submenuId).addEventListener("click", toggleSubmenu);
+// document.getElementById(submenuId1).addEventListener("click", toggleSubmenu1);
 </script>
 </body>
 </html>
