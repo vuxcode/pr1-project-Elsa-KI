@@ -9,21 +9,29 @@
             margin: 0;
             padding: 0;
         }
-
+        .mainContainer{
+            display: flex;
+            margin: 20px;
+        }
+        .menuContainer{
+            width: 130px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
         .menu {
             list-style: none;
             padding: 0;
             margin: 0;
-            background-color: #f4f4f4;
-            width: 100px;
         }
 
         .menu-item {
             display:inline-flex;
             align-items: center;
-            padding: 10px;
+            padding: 12px;
             cursor: pointer;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #555;
         }
 
         .submenu {
@@ -31,34 +39,44 @@
             list-style:none;
             padding: 0;
             margin: 0;
+            background-color: #555;
+            border-radius: 5px;
+            position:absolute;
+            left: 150px;
+            top:0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .submenu-item {
-            padding: 8px 8px;
+            padding: 8px;
             cursor: pointer;
         }
 
         .menu-item:hover .submenu {
             display: block;
-            position:abso;
-            left: 150px;
-            top: 0;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         img {
-            height: 100px;
-            width: 70px;
+            height: 150px;
+            width: 100px;
         }
         .background{
-            align-items: center;
-            background-color: #ddd;
+            border:1px solid #555;
+            border-radius: 20px;
+            padding: 20px;
         }
         .WhereTopsGo,
         .whereBottomsGo,
         .WhereShoesGo{
             margin: 40px;
         } 
+        a{
+            display: inline-block;
+            background-color: brown;
+            color: #fff;
+            text-decoration-line: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -73,47 +91,45 @@
     <div id="countdown">
         <p>05:00</p>
     </div>
-    <ul class="menu">
-        <li class="menu-item">
-            <img src="tank-top-svgrepo-com.svg" alt="svgtop">
-            <ul class="submenu">
-                <li class="submenu-item"><button id="blackStringtop" onclick="Moveit('blackStringtop')"><img src="PhotoRoom-20231202_145557.png" alt="blackstringtop"></button></li>
-                <li class="submenu-item"><button id="greenTop" onclick="Moveit('greenTop')"><img src="PhotoRoom-20231202_151013.png" alt="greentop"></button></li>
-                <li class="submenu-item"><button id="whiteCorset" onclick="Moveit('whiteCorset')"><img src="PhotoRoom-20231202_153315.png" alt="whitecorset"></button></li>
-                <li class="submenu-item"><button id="greySweater" onclick="Moveit('greySweater')"><img src="PhotoRoom-20231202_154341.png" alt="greysweater"></button></li>
+    <div id="mainContainer">
+        <div class="menuContainer">
+            <ul class="menu">
+                <li class="menu-item" onclick="toggleSubmenu">
+                    <img src="tank-top-svgrepo-com.svg" alt="svgtop">
+                    <ul class="submenu" id="submenuId">
+                        <li class="submenu-item"><button id="blackStringtop" onclick="Moveit('blackStringtop')"><img src="PhotoRoom-20231202_145557.png" alt="blackstringtop"></button></li>
+                        <li class="submenu-item"><button id="greenTop" onclick="Moveit('greenTop')"><img src="PhotoRoom-20231202_151013.png" alt="greentop"></button></li>
+                        <li class="submenu-item"><button id="whiteCorset" onclick="Moveit('whiteCorset')"><img src="PhotoRoom-20231202_153315.png" alt="whitecorset"></button></li>
+                        <li class="submenu-item"><button id="greySweater" onclick="Moveit('greySweater')"><img src="PhotoRoom-20231202_154341.png" alt="greysweater"></button></li>
+                    </ul>
+                </li>
+                <li class="menu-item" onclick="toggleSubmenu1">
+                    <img src="pants-garment-svgrepo-com.svg" alt="svgbottom">
+                    <ul class="submenu" id="submenuId1" >
+                        <li class="submenu-item"><button id="blackPants" onclick="Moveit1('blackPants')"><img src="PhotoRoom-20231201_104258.png" alt="BP"></button></li>
+                        <li class="submenu-item"><button id="blueJeans" onclick="Moveit1('blueJeans')"><img src="PhotoRoom-20231201_112136.png" alt="BJ"></button></li>
+                        <li class="submenu-item"><button id="jeanSkirt" onclick="Moveit1('jeanSkirt')"><img src="PhotoRoom-20231202_153551.png" alt="JS"></button></li>
+                        <li class="submenu-item"><button id="whitePants" onclick="Moveit1('whitePants')"><img src="PhotoRoom-20231202_151242.png" alt="WP"></button></li>
+                    </ul>
+                </li>
+                <li class="menu-item" id="submenuId2">
+                    <img src="high-heel-svgrepo-com.svg" alt="svgshoe">
+                    <ul class="submenu">
+                        <li class="submenu-item"><button id="blackandbedazzled" onclick="Moveit2('blackandbedazzled')"><img src="blackandbedazzled.png" alt="blackandbedazzled"></button></li>
+                        <li class="submenu-item"><button id="blackversaceplatforms" onclick="Moveit2('blackversaceplatforms')"><img src="blackversaceplatforms.png" alt="blackversaceplatforms"></button></li>
+                        <li class="submenu-item"><button id="greenshoes" onclick="Moveit2('greenshoes')"><img src="greenshoes.png" alt="greenshoes"></button></li>
+                        <li class="submenu-item"><button id="whitefloralshoes" onclick="Moveit2('whitefloralshoes')"><img src="whitefloralshoes.png" alt="whitefloralshoes"></button></li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <li class="menu-item">
-            <img src="pants-garment-svgrepo-com.svg" alt="svgbottom">
-            <ul class="submenu">
-                <li class="submenu-item"><button id="blackPants" onclick="Moveit1('blackPants')"><img src="PhotoRoom-20231201_104258.png" alt="BP"></button></li>
-                <li class="submenu-item"><button id="blueJeans" onclick="Moveit1('blueJeans')"><img src="PhotoRoom-20231201_112136.png" alt="BJ"></button></li>
-                <li class="submenu-item"><button id="jeanSkirt" onclick="Moveit1('jeanSkirt')"><img src="PhotoRoom-20231202_153551.png" alt="JS"></button></li>
-                <li class="submenu-item"><button id="whitePants" onclick="Moveit1('whitePants')"><img src="PhotoRoom-20231202_151242.png" alt="WP"></button></li>
-            </ul>
-        </li>
-        <li class="menu-item">
-            <img src="high-heel-svgrepo-com.svg" alt="svgshoe">
-            <ul class="submenu">
-                <li class="submenu-item"><button id="" onclick=""><img src="blackandbedazzled.png" alt="blackandbedazzled"></button></li>
-                <li class="submenu-item"><button id="" onclick=""><img src="blackversaceplatforms.png" alt="blackversaceplatforms"></button></li>
-                <li class="submenu-item"><button id="" onclick=""><img src="greenshoes.png" alt="greenshoes"></button></li>
-                <li class="submenu-item"><button id="" onclick=""><img src="whitefloralshoes.png" alt="whitefloralshoes"></button></li>
-            </ul>
-        </li>
-    </ul>
-    <div class="background">
-        <div id="WhereTopsGo">
         </div>
-        <div id="WhereBottomsGo">
-
+        <div class="background">
+            <div id="WhereTopsGo"></div>
+            <div id="WhereBottomsGo"></div>
+            <div id="WhereShoesGo"></div>
         </div>
-        <div id="WhereShoesGo">
-
-        </div>
+        <a href="#" class="button">Submit</a>
     </div>
-    <a href="#" class="button">Submit</a>
-
 <script>
 var timer= 300;
 
@@ -124,14 +140,47 @@ function Moveit(buttonId){
         toPlacement.innerHTML=topsButton.innerHTML;
     }
 }
-var Button5= document.getElementById("blackPants");
-var Button6= document.getElementById("blueJeans");
-var Button7= document.getElementById("jeanSkirt");
-var Button8= document.getElementById("whitePants");
-function Moveit1(){
+function Moveit1(buttonId1){
     var toPlacement1= document.getElementById("WhereBottomsGo");
-    toPlacement1.innerHTML= Button5.innerHTML+ Button6.innerHTML+ Button7.innerHTML+ Button8.innerHTML;
+    var bottomsButton= document.getElementById(buttonId1);
+    if (bottomsButton) {
+        toPlacement1.innerHTML= bottomsButton.innerHTML;
     }
+}
+function Moveit2(buttonId2) {
+    var toPlacement2= document.getElementById("WhereShoesGo");
+    var shoesButton= document.getElementById(buttonId2);
+    if (shoesButton) {
+        toPlacement2.innerHTML= shoesButton.innerHTML;
+    }
+}
+var hideIt= false;
+var submenu= document.getElementById(submenuId);
+function toggleSubmenu(){
+
+if (hideIt) {
+    submenu.style.display= "block";
+    hideIt=false;
+}
+else{
+    submenu.style.display="none";
+    hideIt=true;
+}
+}
+var hideIt1=false;
+var submenu1= document.getElementById(submenuId1);
+function toggleSubmenu1(){
+
+if (hideIt1) {
+    submenu1.style.display= "block";
+    hideIt1=false;
+}
+else{
+    submenu1.style.display="none";
+    hideIt1=true;
+}
+}
+
 </script>
 </body>
 </html>
