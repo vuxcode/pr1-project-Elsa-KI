@@ -14,6 +14,8 @@
             margin: 20px;
         }
         .menuContainer{
+            float: left;
+            width: 25%;
             width: 130px;
             background-color: #858585;
             padding: 10px;
@@ -56,10 +58,15 @@
             display: block;
         }
         img {
+
             height: 150px;
             width: 100px;
         }
         .background{
+            float: left;
+            width: 75%;
+            height: 530px;
+            margin: 0 0 20px;
             border:1px solid #555;
             border-radius: 20px;
             padding: 20px;
@@ -70,7 +77,9 @@
             margin: 40px;
         } 
         a{
-            display: inline-block;
+            display: block;
+            float: right;
+            margin: 0 20px 0 20px;
             background-color: brown;
             color: #fff;
             text-decoration-line: none;
@@ -80,17 +89,7 @@
     </style>
 </head>
 <body>
-    <p>
-        <h3>
-            username
-        </h3>
-    
-    </p>
-
-
-    <div id="countdown">
-        <p>05:00</p>
-    </div>
+    <div><a href="mainmenu.html"></a></div>
     <div id="mainContainer">
         <div class="menuContainer">
             <ul class="menu">
@@ -125,10 +124,11 @@
             <div id="WhereBottomsGo"></div>
             <div id="WhereShoesGo"></div>
         </div>
-        <a href="#" class="button">Submit</a>
+        <a href="#" class="button" id="submit" onclick="feedback()">Submit</a>
+    </div>
+    <div id="feedbackDiv">       
     </div>
 <script>
-
 function Moveit(buttonId){
     var toPlacement= document.getElementById("WhereTopsGo");
     var topsButton= document.getElementById(buttonId);
@@ -157,13 +157,11 @@ function toggleSubmenu(){
 if (hideIt) {
     submenu.style.display= "block";
     hideIt=false;
-    console.log("ON")
 }
 else{
     submenu.style.display="none";
     hideIt=true;
-    console.log("OFF")
-}
+}/*  */
 }
 var hideIt1=false;
 var submenu1= document.getElementById(submenuId1);
@@ -181,7 +179,6 @@ else{
 var hideIt2=false;
 var submenu1= document.getElementById(submenuId2);
 function toggleSubmenu2(){
-
 if (hideIt2) {
     submenu2.style.display= "block";
     hideIt2=false;
@@ -191,8 +188,29 @@ else{
     hideIt2=true;
 }
 }
-// document.getElementById(submenuId).addEventListener("click", toggleSubmenu);
-// document.getElementById(submenuId1).addEventListener("click", toggleSubmenu1);
+function feedback() {
+    var toFeedback = document.getElementById("feedbackDiv");
+    var btn1= document.getElementById("backStringTop");
+    var btn2= document.getElementById("greenTop");
+    var btn3= document.getElementById("whiteCorset");
+    var btn4= document.getElementById("greySweater");
+    var btn5= document.getElementById("backPants");
+    var btn6= document.getElementById("blueJeans");
+    var btn7= document.getElementById("blueSkirt");
+    var btn8= document.getElementById("whitePants");
+    var btn9= document.getElementById("blakcandbedazzeld");
+    var btn10= document.getElementById("blackversaceplatforms");
+    var btn11= document.getElementById("greenshoes");
+    var btn12= document.getElementById("whitefloralshoes");
+    if (btn1 && btn5 && btn9 || btn1 && btn5 && btn10 || btn1 && btn6 && btn9  || btn1 && btn6 &&btn10|| btn2 && btn5 && btn10|| btn2 && btn5 && btn11|| btn2 && btn5 && btn12||btn2 && btn6 && btn11 || btn2 && btn6 && btn12 || btn2 && btn7 && btn11 || btn2 && btn7 && btn12 || btn2 && btn8 && btn11 || btn2 && btn8 && btn12 || btn3 && btn5 && btn9 || btn3 && btn5 && btn10 ||btn3 && btn5 && btn12 || btn3 && btn6 && btn12 || btn3 && btn7 && btn9 || btn3 && btn7 && btn10 || btn3 && btn7 && btn12 || btn4 && btn5 && btn10 || btn4 && btn6 && btn10) {
+    toFeedback.innerHTML = "<p>This was a great match! Good Job! Would you like to try again with the other outfits?</p>";
+            } else {
+            
+                toFeedback.innerHTML = "<p>Unfortunately the colors in this outfit don't match together. Would you like to try again with the other outfits?</p>";
+            
+            }
+        }
+    
 </script>
 </body>
 </html>
